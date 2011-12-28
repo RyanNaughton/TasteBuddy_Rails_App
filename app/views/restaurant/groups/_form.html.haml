@@ -1,0 +1,17 @@
+= form_for @restaurant_group do |f|
+  -if @restaurant_group.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@restaurant_group.errors.count, "error")} prohibited this restaurant_group from being saved:"
+      %ul
+        - @restaurant_group.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+    %i Leave blank to use boss restaurant name
+  .field
+    = f.label :boss_restaurant_id, 'Boss restaurant'
+    = f.collection_select :boss_restaurant_id, @valid_boss_restaurants, :id, :selection_identifier, prompt: true
+  .actions
+    = f.submit 'Save'

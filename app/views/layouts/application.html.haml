@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title TasteBuddy
+    = stylesheet_link_tag    'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+  #container
+    %ul.user_nav
+      %li= render 'devise/shared/registration_items'
+      %li= render 'devise/shared/login_items'
+    %p#notice= notice
+    %p#alert= alert
+    = yield

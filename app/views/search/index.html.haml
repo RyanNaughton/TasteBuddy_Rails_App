@@ -1,0 +1,5 @@
+%h1 Search
+
+- form_for @search, :url => search_index_url, :html => { :method => :get} do |f|
+  = f.text_field :keywords
+  = f.submit

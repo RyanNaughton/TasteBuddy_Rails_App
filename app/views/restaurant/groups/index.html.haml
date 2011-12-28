@@ -1,0 +1,26 @@
+%h1 Restaurant groups
+
+%table
+  %tr
+    %th Name
+    %th Boss restaurant
+    %th
+    - if can? :update, Restaurant::Group
+      %th
+    - if can? :destroy, Restaurant::Group
+      %th
+
+  - @restaurant_groups.each do |restaurant_group|
+    %tr
+      %td= restaurant_group.name
+      %td= restaurant_group.boss_restaurant_id
+      %td= link_to 'Show', restaurant_group
+      - if can? :update, restaurant_group
+        %td= link_to 'Edit', edit_restaurant_group_path(restaurant_group)
+      - if can? :destroy, restaurant_group
+        %td= link_to 'Destroy', restaurant_group, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+- if can? :create, Restaurant::Group
+  = link_to 'New Group', new_restaurant_group_path

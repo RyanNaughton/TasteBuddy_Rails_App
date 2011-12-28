@@ -1,0 +1,5 @@
+%p
+  %b= link_to item.name, restaurant_menu_item_path(item)
+  - if item.description.present?
+    %br/
+    = item.description 

@@ -1,0 +1,66 @@
+%h2 Sign up
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = devise_error_messages!
+
+  %p
+    = f.label :username
+    %i (required)
+    %br/
+    = f.text_field :username
+
+  %p
+    = f.label :email
+    %i (required)
+    %br/
+    = f.email_field :email
+
+  %p
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name
+
+  %p
+    = f.label :last_name
+    %br/
+    = f.text_field :last_name
+
+  %p
+    = f.label :postal_code, 'ZIP Code'
+    %br/
+    = f.text_field :postal_code
+
+  %p
+    = f.label :country
+    %br/
+    = f.collection_select :country, User.countries, :to_s, :to_s, :prompt => false
+
+  %p
+    = f.label :gender
+    %br/
+    = f.radio_button :gender, 'm'
+    = f.label :gender, 'male', :value => 'm'
+    %br/
+    = f.radio_button :gender, 'f'
+    = f.label :gender, 'female', :value => 'f'
+
+  %p
+    = f.label :birthday
+    %br/
+    = f.date_select :birthday, :start_year => (Time.now.year - 60), :end_year => (Time.now.year - 10), :order => [:month, :day, :year], :include_blank => true
+
+  %p
+    = f.label :password
+    %i (required, minimum six characters)
+    %br/
+    = f.password_field :password
+
+  %p
+    = f.label :password_confirmation
+    %i (required)
+    %br/
+    = f.password_field :password_confirmation
+
+  %p= f.submit 'Sign up'
+
+= render :partial => 'devise/shared/links'

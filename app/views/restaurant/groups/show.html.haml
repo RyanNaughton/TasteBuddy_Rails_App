@@ -1,0 +1,22 @@
+%p
+  %b Name:
+  = @restaurant_group.name
+- if @restaurant_group.restaurants.blank?
+  %i No member restaurants
+  %br/
+- else
+  %p
+    %b Boss restaurant:
+    = render partial: 'shared/restaurant', object: @restaurant_group.boss_restaurant, as: :restaurant
+  %p
+    %b Member restaurants:
+    - if @restaurant_group.junior_restaurants.present?
+      %br/
+      = render partial: 'shared/restaurant', collection: @restaurant_group.junior_restaurants, as: :restaurant
+    - else
+      %i No additional members
+
+- if can? :update, @restaurant_group
+  = link_to 'Edit', edit_restaurant_group_path(@restaurant_group)
+  \|
+= link_to 'Back', restaurant_groups_path

@@ -1,0 +1,76 @@
+%h2
+  Edit #{resource_name.to_s.humanize}
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+  = devise_error_messages!
+
+  %p
+    = f.label :username
+    %i (required)
+    %br/
+    = f.text_field :username
+
+  %p
+    = f.label :email
+    %i (required)
+    %br/
+    = f.email_field :email
+
+  %p
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name
+
+  %p
+    = f.label :last_name
+    %br/
+    = f.text_field :last_name
+
+  %p
+    = f.label :postal_code, 'ZIP Code'
+    %br/
+    = f.text_field :postal_code
+
+  %p
+    = f.label :country
+    %br/
+    = f.collection_select :country, User.countries, :to_s, :to_s, :prompt => false
+
+  %p
+    = f.label :gender
+    %br/
+    = f.radio_button :gender, 'm'
+    = f.label :gender, 'male', :value => 'm'
+    %br/
+    = f.radio_button :gender, 'f'
+    = f.label :gender, 'female', :value => 'f'
+
+  %p
+    = f.label :birthday
+    %br/
+    = f.date_select :birthday, :start_year => (Time.now.year - 60), :end_year => (Time.now.year - 10), :order => [:month, :day, :year], :include_blank => true
+
+  %p
+    = f.label :password
+    %i (minimum six characters; leave blank if you don't want to change it)
+    %br/
+    = f.password_field :password
+
+  %p
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation
+
+  %p
+    = f.label :current_password
+    %i (we need your current password to confirm your changes)
+    %br/
+    = f.password_field :current_password
+
+  %p= f.submit 'Update'
+
+%h3 Cancel my account
+
+%p
+  Unhappy? #{link_to 'Cancel my account', registration_path(resource_name), :confirm => 'Are you sure?', :method => :delete}.
+= link_to 'Back', :back

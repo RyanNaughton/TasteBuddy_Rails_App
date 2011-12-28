@@ -1,0 +1,14 @@
+%h1 Photos
+
+- if @pictures.empty?
+  %p
+    %i
+      =raw "No photos here. Why don't you #{link_to 'add one', new_picture_path}?"
+- else
+  = render @pictures
+
+= will_paginate @restaurants
+
+%br/
+
+= link_to 'Add a Picture', new_picture_path

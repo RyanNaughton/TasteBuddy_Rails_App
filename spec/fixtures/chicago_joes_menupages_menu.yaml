@@ -1,0 +1,310 @@
+---
+- :subcategories:
+  - :name: First Edition
+    :items:
+    - :name: Mrs. O’Leary’s Firehouse Chili
+      :prices:
+      - 3.95
+      - 4.5
+    - :name: Joe's Special Gumbo
+      :prices:
+      - 3.95
+      - 4.5
+    - :name: Soup Of The Day
+      :prices:
+      - 3.5
+      - 3.95
+    - :name: Onion Mound
+      :prices:
+      - 5.95
+    - :name: Fried Calamari
+      :prices:
+      - 9.95
+    - :name: Raw Oysters And Clam
+      :prices: []
+    - :description: (1/2 dozen)
+      :name: Oysters Rockefeller
+      :prices:
+      - 9.95
+    - :description: (1/2 dozen)
+      :name: Baked Clams
+      :prices:
+      - 9.95
+    - :description: (1/2 dozen)
+      :name: Clams Casino
+      :prices:
+      - 9.95
+    - :description: (1 dozen)
+      :name: Steamed Clams
+      :prices:
+      - 10.95
+    - :name: Grilled Calamari
+      :prices:
+      - 10.95
+    - :description: each
+      :name: Fried Jumbo Shrimp
+      :prices:
+      - 3.25
+    - :name: Joe's Buffalo Wings
+      :prices:
+      - 8.95
+    - :name: Mozzarella Stix Marinara
+      :prices:
+      - 7.95
+    - :name: Blackened Shrimp
+      :prices:
+      - 9.95
+    - :name: Fried Shrimp Appetizer
+      :prices:
+      - 9.95
+    - :name: Sauteed Garlic Shrimp
+      :prices:
+      - 8.95
+    - :name: Blackened Chicken Fingers
+      :prices:
+      - 6.95
+    - :name: Coconut Shrimp
+      :prices:
+      - 8.95
+    - :description: (by the 1/2 pound or the 1/4 pound)
+      :name: Peel & Eat Shrimp
+      :prices:
+      - 7.95
+      - 12.95
+  - :name: Joe Linked To Great Salads
+    :items:
+    - :name: Tex Mex
+      :prices:
+      - 9.95
+    - :name: Julienne
+      :prices:
+      - 9.95
+    - :name: Spinach
+      :prices:
+      - 7.95
+    - :name: Caesar
+      :prices:
+      - 8.95
+    - :name: Large House
+      :prices:
+      - 7.95
+    - :name: Cobb
+      :prices:
+      - 9.95
+    - :description: ! 'Dressings: Thousand, Creamy Garlic, Italian, French And House'
+  - :name: Study Shows Joe's Pasta Chicago's Best
+    :items:
+    - :description: with sausage
+      :name: Mostaccioli
+      :prices:
+      - 12.95
+  - :name: Joe's Sandwiches Top Poll
+    :items:
+    - :name: Cheezeborgers
+      :prices:
+      - 8.95
+    - :name: Veggie Burger
+      :prices:
+      - 8.95
+    - :name: Turkey Burger
+      :prices:
+      - 8.95
+    - :name: Ribwich
+      :prices:
+      - 9.95
+    - :name: Fish Sandwich
+      :prices:
+      - 9.95
+    - :name: Grilled Reuben
+      :prices:
+      - 9.95
+    - :name: Sloppy Joe's
+      :prices:
+      - 8.95
+    - :name: Corned Beef Or Rye
+      :prices:
+      - 8.95
+    - :name: 6 Oz. Tenderloin Steak Sandwich
+      :prices:
+      - 10.95
+    - :description: blackened, bbq, grilled
+      :name: Breast Of Chicken Sandwich
+      :prices:
+      - 9.95
+    - :description: All Sandwiches Served With Coleslaw, Choice Of Potato Salad, Fruit
+        Salad Or Fries And Garnish
+  - :name: Joe's Dinner's Chicago's Greatest - After 5:00 Pm
+    :items:
+    - :description: chef's choice
+      :name: Mon.
+      :prices:
+      - 10.95
+    - :description: chef's choice
+      :name: Tues.
+      :prices:
+      - 10.95
+    - :description: stuffed shells with sausage & peppers
+      :name: Wed.
+      :prices:
+      - 10.95
+    - :description: baked or bbq pork chop
+      :name: Thur.
+      :prices:
+      - 10.95
+    - :description: seafood platter
+      :name: Fri.
+      :prices:
+      - 15.95
+    - :description: joe's homemade crabcakes
+      :name: Sat.
+      :prices:
+      - 15.95
+    - :description: roast pork & dressing
+      :name: Sun.
+      :prices:
+      - 10.95
+    - :description: Served With Soup Or Salad And A Fresh Vegetable
+  - :name: ! 'Joe''s Dinner''s Voted #1'
+    :items:
+    - :name: Ribs
+      :prices:
+      - 14.95
+      - 19.95
+    - :description: with pasta or potato
+      :name: Chicken Parmigiana
+      :prices:
+      - 14.95
+    - :description: broiled or blackened
+      :name: 8 Oz. Fillet
+      :prices:
+      - 19.95
+    - :description: boneless & skinless
+      :name: Grilled Breast Of Chicken
+      :prices:
+      - 13.95
+    - :name: 1/2 Roast Or B.B.Q. Chicken
+      :prices:
+      - 12.95
+    - :name: Fried Shrimp
+      :prices:
+      - 19.95
+    - :description: broiled or blackened
+      :name: Fresh White Fish
+      :prices:
+      - 18.95
+    - :name: Ma's Homemade Meatloaf
+      :prices:
+      - 10.95
+    - :description: They Just Don't Get Any Better Than This
+  - :name: Joe's Combination
+    :items:
+    - :name: Chicken & Ribs
+      :prices:
+      - 17.95
+    - :name: Chicken & Shrimp
+      :prices:
+      - 17.95
+    - :name: Shrimp & Ribs
+      :prices:
+      - 18.95
+    - :name: Joe's Triple Play - Chicken, Ribs & Shrimp
+      :prices:
+      - 19.95
+    - :name: Blackened Chicken Breast & Shrimp Grilled Shrimp Scampi
+      :prices:
+      - 18.95
+      :options:
+      - :name: with pasta
+        :prices:
+        - 19.95
+  - :name: Final Edition
+    :items:
+    - :name: Key Lime Pie
+      :prices:
+      - 4.0
+    - :name: Chicago Style Cheesecake
+      :prices:
+      - 4.0
+    - :name: Joe's Famous Banana Split
+      :prices:
+      - 5.0
+  - :name: Joe Ends Prohibition - Bottled
+    :items:
+    - :name: Heineken
+      :prices: []
+    - :name: Amstel Lite
+      :prices: []
+    - :name: Becks
+      :prices: []
+    - :name: Miller Lite
+      :prices: []
+    - :name: Miller Genuine Draft
+      :prices: []
+    - :name: Old Style
+      :prices: []
+    - :name: Weiss
+      :prices: []
+    - :name: Corona
+      :prices: []
+    - :name: Budweiser
+      :prices: []
+    - :description: Wine ( By The Glass Or Bottle ), Booze (We Have It All)
+  - :name: Joe Ends Prohibition - Draft
+    :items:
+    - :name: Blue Moon
+      :prices: []
+    - :name: Miller Lite
+      :prices: []
+    - :name: Sam Adam's
+      :prices: []
+    - :name: Bass Ale
+      :prices: []
+    - :name: Harp
+      :prices: []
+    - :name: Guinness
+      :prices: []
+  - :name: Sunday Brunch
+    :items:
+    - :name: Complimentary Glass Of Champagne
+      :prices: []
+    - :name: French Toast
+      :prices: []
+    - :name: Eggs Any Style
+      :prices: []
+    - :name: Sausage
+      :prices: []
+    - :name: Bacon
+      :prices: []
+    - :name: BBQ  Ribs
+      :prices: []
+    - :name: Fried Chicken
+      :prices: []
+    - :name: Bagels
+      :prices: []
+    - :name: Potatoes O'brien
+      :prices: []
+    - :name: Baked Ham
+      :prices: []
+    - :name: Smoked Salmon
+      :prices: []
+    - :name: Assorted Salads
+      :prices: []
+    - :name: Quiche
+      :prices: []
+    - :name: Lox And Cream Cheese
+      :prices: []
+    - :name: Muffins
+      :prices: []
+    - :name: Pastries
+      :prices: []
+    - :name: Coffee Cake
+      :prices: []
+    - :name: Stuffed Shells
+      :prices: []
+    - :name: Fresh Fruit
+      :prices: []
+    - :name: Homemade Breads
+      :prices: []
+    - :description: And "Da Beast" Eggs Benedict On Irving Park
+  :description: After Church, Don't Forget Joe's Sunday Brunch. Sunday 10:00 Am -
+    2:00 Pm

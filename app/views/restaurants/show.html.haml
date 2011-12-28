@@ -1,0 +1,169 @@
+%p
+  %b Name:
+  = @restaurant.name
+%p
+  %b Foursquare v1:
+  = @restaurant.foursquare_url.present? ? link_to(@restaurant.foursquare_url, @restaurant.foursquare_url) : "\u2014"
+- if can? :manage, @restaurant
+  %p
+    %b Foursquare v2:
+    = @restaurant.foursquare_v2.present? ? @restaurant.foursquare_v2 : "\u2014"
+- if can? :manage, @restaurant
+  %p
+    %b Instagram v1:
+    = @restaurant.instagram_v1.present? ? @restaurant.instagram_v1 : "\u2014"
+%p
+  %b Yelp URL:
+  = @restaurant.yelp_url.present? ? link_to(@restaurant.yelp_url, @restaurant.yelp_url) : "\u2014"
+- if can? :manage, @restaurant
+  %p
+    %b Yelp ID:
+    = @restaurant.yelp_id.present? ? @restaurant.yelp_id : "\u2014"
+- if can? :manage, @restaurant
+  %p
+    %b GrubHub URL:
+    = @restaurant.grubhub_url.present? ? link_to(@restaurant.grubhub_url, @restaurant.grubhub_url) : "\u2014"
+  - if @restaurant.grubhub_url.present?
+    %p
+      %b GrubHub CSV:
+      = link_to('Download', restaurant_grubhub_menu_path(@restaurant, format: 'csv'))
+%p
+  %b MenuPages URL:
+  = @restaurant.menupages_url.present? ? link_to(@restaurant.menupages_url, @restaurant.menupages_url) : "\u2014"
+- if can?(:manage, @restaurant) and @restaurant.menupages_url.present?
+  %p
+    %b MenuPages CSV:
+    = link_to('Download', restaurant_menupages_menu_path(@restaurant, format: 'csv'))
+%p
+  %b Cuisine type:
+  = @restaurant.cuisine_type
+%p
+  %b Neighborhood:
+  = @restaurant.neighborhood
+%p
+  %b Address description:
+  = @restaurant.address_description
+%p
+  %b Address 1:
+  = @restaurant.address_1
+%p
+  %b Address 2:
+  = @restaurant.address_2
+%p
+  %b City:
+  = @restaurant.city_town
+%p
+  %b State:
+  = @restaurant.state_province
+%p
+  %b Postal code:
+  = @restaurant.postal_code
+%p
+  %b Country:
+  = @restaurant.country
+%p
+  %b Phone:
+  = @restaurant.phone
+%p
+  %b Fax:
+  = @restaurant.fax
+%p
+  %b Website URL:
+  = @restaurant.website_url.present? ? link_to(@restaurant.website_url, @restaurant.website_url) : "\u2014"
+%p
+  %b Dress code:
+  = @restaurant.dress_code
+%p
+  %b Credit cards:
+  = @restaurant.credit_cards
+%p
+  %b Reservations:
+  = @restaurant.reservations
+%p
+  %b Takeout:
+  = @restaurant.takeout
+%p
+  %b Delivery:
+  = @restaurant.delivery
+%p
+  %b Delivery minimum:
+  = @restaurant.delivery_minimum
+%p
+  %b Delivery fee:
+  = @restaurant.delivery_fee
+%p
+  %b Delivery details:
+  = @restaurant.delivery_details
+%p
+  %b Delivery radius:
+  = @restaurant.delivery_radius
+%p
+  %b Wheelchair access:
+  = @restaurant.wheelchair_access
+%p
+  %b Group friendly:
+  = @restaurant.group_friendly
+%p
+  %b Kid friendly:
+  = @restaurant.kid_friendly
+%p
+  %b Outdoor seating:
+  = @restaurant.outdoor_seating
+%p
+  %b BYOB:
+  = @restaurant.byob
+%p
+  %b Alcohol type:
+  = @restaurant.alcohol_type
+%p
+  %b Live music:
+  = @restaurant.live_music
+%p
+  %b Live music details:
+  = @restaurant.live_music_details
+%p
+  %b Jukebox:
+  = @restaurant.jukebox
+%p
+  %b Parking:
+  = @restaurant.parking
+%p
+  %b Parking details:
+  = @restaurant.parking_details
+%p
+  %b Smoking:
+  = @restaurant.smoking
+%p
+  %b WiFi:
+  = @restaurant.wifi
+%p
+  %b Nearest transit:
+  = @restaurant.nearest_transit
+%p
+  %b Additional details:
+  = @restaurant.additional_details
+%p
+  %b Latitude:
+  = @restaurant.latitude
+%p
+  %b Longitude:
+  = @restaurant.longitude
+
+- if @restaurant.menu.present?
+  %h2 Menu
+
+  %p
+    %b Description:
+    = @restaurant.menu.description
+
+  %p
+    %b Menu items:
+    %br/
+    - @restaurant.menu.menu_items.each do |item|
+      = link_to item.name, restaurant_menu_item_path(item)
+      %br/
+
+- if can? :update, @restaurant
+  = link_to 'Edit', edit_restaurant_path(@restaurant)
+  \|
+= link_to 'Back', restaurants_path

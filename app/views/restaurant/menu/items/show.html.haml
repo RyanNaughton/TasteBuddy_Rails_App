@@ -1,0 +1,88 @@
+- if @pictures.present?
+  %p
+    %b Pictures
+    = render collection: @pictures, partial: 'pictures/picture'
+- if current_user
+  %p
+    %b Upload a picture
+    = form_for @picture do |f|
+      = f.hidden_field :restaurant_id
+      = f.hidden_field :menu_item_id
+      .field
+        = f.label :attachment, 'Select a picture:'
+        = f.file_field :attachment
+      .field
+        = f.label :caption
+        %i (Sara licking the chicken tikka masala sauce off the plate...)
+        = f.text_field :caption, :size => '140'
+      .actions
+        = f.submit 'Upload file'
+  %p
+    %b Upload a comment
+    = render 'restaurant/menu/item/comments/form'
+%p
+  %b Comments
+  %br/
+  - if @restaurant_menu_item.comments.present?
+    = render collection: @restaurant_menu_item.comments, partial: 'restaurant/menu/item/comments/comment'
+  - else
+    %i No comments
+- if current_user
+  %p
+    %b Rate
+    = form_for Restaurant::Menu::Item::Rating.new, url: restaurant_menu_item_ratings_path(@restaurant_menu_item), method: 'post' do
+      = label("value_1", content_tag(:span, '1'), {:class=>"rating", :id=>"1"})
+      = radio_button_tag("value", 1, @user_rating == 1, :class => 'rating_button')
+      = label("value_2", content_tag(:span, '2'), {:class=>"rating", :id=>"2"})
+      = radio_button_tag("value", 2, @user_rating == 2, :class => 'rating_button')
+      = label("value_3", content_tag(:span, '3'), {:class=>"rating", :id=>"3"})
+      = radio_button_tag("value", 3, @user_rating == 3, :class => 'rating_button')
+      = label("value_4", content_tag(:span, '4'), {:class=>"rating", :id=>"4"})
+      = radio_button_tag("value", 4, @user_rating == 4, :class => 'rating_button')
+      = label("value_5", content_tag(:span, '5'), {:class=>"rating", :id=>"5"})
+      = radio_button_tag("value", 5, @user_rating == 5, :class => 'rating_button')
+      = submit_tag 'Post'
+%p
+  %b Name:
+  = @restaurant_menu_item.name
+%p
+  %b Section:
+  = @restaurant_menu_item.section
+%p
+  %b Subsection:
+  = @restaurant_menu_item.subsection
+%p
+  %b Number:
+  = @restaurant_menu_item.number
+%p
+  %b Foreign name:
+  = @restaurant_menu_item.foreign_name
+%p
+  %b Alternative name:
+  = @restaurant_menu_item.alternative_name
+%p
+  %b Description:
+  = @restaurant_menu_item.description
+%p
+  %b Tags:
+  = @restaurant_menu_item.tags
+%p
+  %b Category values:
+  = @restaurant_menu_item.category_values
+%p
+  %b Price selector:
+  = @restaurant_menu_item.price_selector
+%p
+  %b CPG:
+  = @restaurant_menu_item.cpg
+%p
+  %b Price:
+  = @restaurant_menu_item.price
+%p
+  %b Ticket price:
+  = @restaurant_menu_item.ticket_price
+
+- if can? :update, @restaurant_menu_item
+  = link_to 'Edit', edit_restaurant_menu_item_path(@restaurant_menu_item)
+  \|
+= link_to 'Back', restaurant_menu_items_path

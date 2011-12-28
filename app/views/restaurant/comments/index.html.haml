@@ -1,0 +1,19 @@
+%h1 Listing restaurant_comments
+
+%table
+  %tr
+    %th Text
+    %th
+    %th
+    %th
+
+  - @restaurant_comments.each do |restaurant_comment|
+    %tr
+      %td= restaurant_comment.text
+      %td= link_to 'Show', restaurant_comment
+      %td= link_to 'Edit', edit_restaurant_comment_path(restaurant_comment)
+      %td= link_to 'Destroy', restaurant_comment, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Comment', new_restaurant_comment_path

@@ -1,0 +1,43 @@
+= form_for @festival do |f|
+  -if @festival.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@festival.errors.count, "error")} prohibited this festival from being saved:"
+      %ul
+        - @festival.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :address_description
+    = f.text_field :address_description
+  .field
+    = f.label :address_1
+    = f.text_field :address_1
+  .field
+    = f.label :city_town
+    = f.text_field :city_town
+  .field
+    = f.label :state_province
+    = f.text_field :state_province
+  .field
+    = f.label :postal_code
+    = f.text_field :postal_code
+  .field
+    = f.label :website_url
+    = f.text_field :website_url
+  .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    = f.text_field :longitude
+  .field
+    = f.label :start_date
+    = f.date_select :start_date
+  .field
+    = f.label :end_date
+    = f.date_select :end_date
+  .actions
+    = f.submit 'Save'

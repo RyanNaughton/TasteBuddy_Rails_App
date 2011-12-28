@@ -1,0 +1,42 @@
+%h1 Restaurants
+
+%table
+  %tr
+    %th Name
+    %th 4sq
+    %th Yelp
+    - if can? :manage, Restaurant
+      %th GH
+    %th MP
+    %th Address
+    %th Phone
+    %th Website
+    %th
+    - if can? :update, Restaurant
+      %th
+    - if can? :destroy, Restaurant
+      %th
+
+  - @restaurants.each do |restaurant|
+    %tr
+      %td= restaurant.name
+      %td= restaurant.foursquare_v1.present? ? link_to('4sq', restaurant.foursquare_url) : "\u2014"
+      %td= restaurant.yelp_url.present? ? link_to('Yelp', restaurant.yelp_url) : "\u2014"
+      - if can? :manage, restaurant
+        %td= restaurant.grubhub_url.present? ? link_to('GH', restaurant.grubhub_url) : "\u2014"
+      %td= restaurant.menupages_url.present? ? link_to('MP', restaurant.menupages_url) : "\u2014"
+      %td= restaurant.address_1
+      %td= restaurant.phone
+      %td= restaurant.website_url.present? ? link_to('Website', restaurant.website_url) : "\u2014"
+      %td= link_to 'Show', restaurant
+      - if can? :update, restaurant
+        %td= link_to 'Edit', edit_restaurant_path(restaurant)
+      - if can? :destroy, restaurant
+        %td= link_to 'Destroy', restaurant, :confirm => 'Are you sure?', :method => :delete
+
+= will_paginate @restaurants
+
+%br
+
+- if can? :create, Restaurant
+  = link_to 'New Restaurant', new_restaurant_path

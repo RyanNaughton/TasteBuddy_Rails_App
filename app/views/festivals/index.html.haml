@@ -1,0 +1,39 @@
+%h1 Listing festivals
+
+%table
+  %tr
+    %th Name
+    %th Address description
+    %th Address 1
+    %th City town
+    %th State province
+    %th Postal code
+    %th Website url
+    %th Latitude
+    %th Longitude
+    %th Start date
+    %th End date
+    %th
+    %th
+    %th
+
+  - @festivals.each do |festival|
+    %tr
+      %td= festival.name
+      %td= festival.address_description
+      %td= festival.address_1
+      %td= festival.city_town
+      %td= festival.state_province
+      %td= festival.postal_code
+      %td= festival.website_url
+      %td= festival.latitude
+      %td= festival.longitude
+      %td= festival.start_date
+      %td= festival.end_date
+      %td= link_to 'Show', festival
+      %td= link_to 'Edit', edit_festival_path(festival)
+      %td= link_to 'Destroy', festival, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Festival', new_festival_path

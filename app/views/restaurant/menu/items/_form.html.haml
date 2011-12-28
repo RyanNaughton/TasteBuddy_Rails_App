@@ -1,0 +1,49 @@
+= form_for @restaurant_menu_item do |f|
+  -if @restaurant_menu_item.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@restaurant_menu_item.errors.count, "error")} prohibited this menu_item from being saved:"
+      %ul
+        - @restaurant_menu_item.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :section
+    = f.text_field :section
+  .field
+    = f.label :subsection
+    = f.text_field :subsection
+  .field
+    = f.label :number
+    = f.text_field :number
+  .field
+    = f.label :foreign_name
+    = f.text_field :foreign_name
+  .field
+    = f.label :alternative_name
+    = f.text_field :alternative_name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :tags
+    = f.text_field :tags
+  .field
+    = f.label :category_values
+    = f.text_field :category_values
+  .field
+    = f.label :price_selector
+    = f.check_box :price_selector
+  .field
+    = f.label :cpg, 'CPG'
+    = f.check_box :cpg
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :ticket_price
+    = f.text_field :ticket_price
+  .actions
+    = f.submit 'Save'

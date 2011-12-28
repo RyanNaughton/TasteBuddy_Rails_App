@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Text:
+  = @restaurant_menu_item_comment.text
+
+= link_to 'Edit', edit_restaurant_menu_item_comment_path(@restaurant_menu_item_comment)
+\|
+= link_to 'Back', restaurant_menu_item_comments_path

@@ -1,0 +1,25 @@
+%figure
+  %img{:src => @picture.attachment.url(:'300px')}
+  %br/
+  - if @picture.caption.present?
+    %figcaption= @picture.caption
+- if @picture.restaurant_id
+  %p
+    %b Restaurant
+    %br/
+    = link_to @picture.restaurant.name, @picture.restaurant
+- if @picture.menu_item_id
+  %p
+    %b Menu item
+    %br/
+    = link_to @picture.menu_item.name, @picture.menu_item
+%p
+  %b Styles
+  %br/
+  - (@picture.export_styles << :original).each do |style|
+    = link_to style, @picture.attachment.url(style)
+
+- if can? :update, @picture
+  = link_to 'Edit', edit_picture_path(@picture)
+  \|
+= link_to 'Back', pictures_path

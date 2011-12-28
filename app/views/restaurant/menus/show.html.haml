@@ -1,0 +1,16 @@
+%h2 Menu
+
+%p
+  %b Restaurant:
+  = link_to(@restaurant.name, @restaurant)
+
+%p
+  %b Description:
+  = @restaurant_menu.description
+
+%p
+  %b Menu items:
+  %br/
+  - @restaurant_menu.menu_items.each do |item|
+    = link_to item.name, restaurant_menu_item_path(item)
+    %br/

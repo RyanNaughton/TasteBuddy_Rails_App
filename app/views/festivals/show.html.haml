@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @festival.name
+%p
+  %b Address description:
+  = @festival.address_description
+%p
+  %b Address 1:
+  = @festival.address_1
+%p
+  %b City town:
+  = @festival.city_town
+%p
+  %b State province:
+  = @festival.state_province
+%p
+  %b Postal code:
+  = @festival.postal_code
+%p
+  %b Website url:
+  = @festival.website_url
+%p
+  %b Latitude:
+  = @festival.latitude
+%p
+  %b Longitude:
+  = @festival.longitude
+%p
+  %b Start date:
+  = @festival.start_date
+%p
+  %b End date:
+  = @festival.end_date
+
+= link_to 'Edit', edit_festival_path(@festival)
+\|
+= link_to 'Back', festivals_path

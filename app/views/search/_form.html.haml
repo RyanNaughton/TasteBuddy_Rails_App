@@ -1,0 +1,16 @@
+= form_for @search, :url => '/search', :html => { :method => :post} do |f|
+  -if @search.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@search.errors.count, "error")} prohibited this search from being saved:"
+      %ul
+        - @search.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :find
+    = f.text_field :find
+  .field
+    = f.label :near
+    = f.text_field :near
+  .actions
+    = f.submit 'Submit'

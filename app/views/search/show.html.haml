@@ -1,0 +1,15 @@
+%p#notice= notice
+
+= render 'form'
+
+%h2 Results
+%p
+  You searched for:
+  %i= @find
+  %br
+  Near:
+  %i= @near
+%p
+  - @results.each do |restaurant|
+    = render restaurant
+    = render restaurant.menu_items

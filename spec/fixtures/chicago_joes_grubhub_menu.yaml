@@ -1,0 +1,274 @@
+---
+- :item_name: Joe’s Cheeseborgers
+  :item_price: 9.95
+  :item_description: 1/2 pound patty of price angus beef, topped with choice of cheese,
+    and served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Popular Items
+- :item_name: Wrigleyville Fully Loaded
+  :item_price: 9.95
+  :item_description: Crisp smoked bacon, drizzled Joe’s BBQ sauce, and your choice
+    of cheese. Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Popular Items
+- :item_name: Chicken Fingers
+  :item_price: 8.95
+  :item_description: Breaded or blackened.
+  :menu_section: Popular Items
+- :item_name: Burned Out Bleu
+  :item_price: 9.95
+  :item_description: Topped with bleu cheese on a garlic toasted bun. Served with
+    fresh pickle, cole slaw, and choice of side.
+  :menu_section: Popular Items
+- :item_name: Patty Melt
+  :item_price: 9.95
+  :item_description: Cheddar and Swiss cheeses, grilled onion, served on rye bread.
+    Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Popular Items
+- :item_name: 20 oz. Coke
+  :item_price: 3.0
+  :item_description: !!null 
+  :menu_section: Beverages
+- :item_name: 20 oz. Diet Coke
+  :item_price: 3.0
+  :item_description: !!null 
+  :menu_section: Beverages
+- :item_name: 20 oz. Sprite
+  :item_price: 3.0
+  :item_description: !!null 
+  :menu_section: Beverages
+- :item_name: Chili
+  :item_price: 4.5
+  :item_description: !!null 
+  :menu_section: First Edition
+- :item_name: Onion Mound
+  :item_price: 5.95
+  :item_description: !!null 
+  :menu_section: First Edition
+- :item_name: ! 'Mozzarella Sticks [Not Available] '
+  :item_price: 6.95
+  :item_description: !!null 
+  :menu_section: First Edition
+- :item_name: Jumbo Chicken wings
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: First Edition
+- :item_name: Chicken Fingers
+  :item_price: 8.95
+  :item_description: Breaded or blackened.
+  :menu_section: First Edition
+- :item_name: Fried Calamari
+  :item_price: 10.95
+  :item_description: !!null 
+  :menu_section: First Edition
+- :item_name: Jumbo Fried Shrimp
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: First Edition
+- :item_name: Oysters on 1/2 Shells
+  :item_price: 7.95
+  :item_description: !!null 
+  1/2 Dozen: 7.95
+  1 Dozen: 12.95
+  :menu_section: First Edition
+- :item_name: Oyster Rockefeller
+  :item_price: 9.95
+  :item_description: 1/2 dozen.
+  :menu_section: First Edition
+- :item_name: Appetizer Sampler
+  :item_price: 12.95
+  :item_description: Mozzarella sticks, chicken wings, chicken fingers, and onion
+    rings.
+  :menu_section: First Edition
+- :item_name: House Salad
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: Joe's Fresh Salads
+- :item_name: Tex Mex Salad
+  :item_price: 9.95
+  :item_description: !!null 
+  :menu_section: Joe's Fresh Salads
+- :item_name: Cobb Salad
+  :item_price: 9.95
+  :item_description: !!null 
+  :menu_section: Joe's Fresh Salads
+- :item_name: Caesar Salad
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: Joe's Fresh Salads
+- :item_name: Joe’s Cheeseborgers
+  :item_price: 9.95
+  :item_description: 1/2 pound patty of price angus beef, topped with choice of cheese,
+    and served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Irving Park Roast Trip
+  :item_price: 9.95
+  :item_description: Pepper jack cheese, homemade guacamole, and salads topped with
+    a dab of sour cream. Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Bears Sunday Shuffle
+  :item_price: 9.95
+  :item_description: Joe’s sloppy Joe, pepper jack and cheese cheese, and onion mound.
+    Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Wrigleyville Fully Loaded
+  :item_price: 9.95
+  :item_description: Crisp smoked bacon, drizzled Joe’s BBQ sauce, and your choice
+    of cheese. Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Chicago Joe’s Sunday Brunch
+  :item_price: 9.95
+  :item_description: Fried egg, bacon, cheddar cheese, maple syrup, served on french
+    toast. Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Garlic Mango
+  :item_price: 9.95
+  :item_description: Joe’s mango sauce, garlic butter, Swiss cheese, onion mound,
+    lettuce, tomato, and mayo. Served with fresh pickle, cole slaw, and choice of
+    side.
+  :menu_section: Burger Art Museum
+- :item_name: Burned Out Bleu
+  :item_price: 9.95
+  :item_description: Topped with bleu cheese on a garlic toasted bun. Served with
+    fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: China Town
+  :item_price: 9.95
+  :item_description: Teriyaki sauce, onion mound, grilled pineapple, cheddar cheese,
+    lettuce, tomato, and mayo. Served with fresh pickle, cole slaw, and choice of
+    side.
+  :menu_section: Burger Art Museum
+- :item_name: Botanical Garden of Joe’s
+  :item_price: 9.95
+  :item_description: Mushrooms, tomatoes, lettuce, onion, pickles, and your choice
+    of cheese. Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Joe’s Mini-Burgers
+  :item_price: 9.95
+  :item_description: 3 mini burgers topped with grilled onions and your choice of
+    cheese.  Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Patty Melt
+  :item_price: 9.95
+  :item_description: Cheddar and Swiss cheeses, grilled onion, served on rye bread.
+    Served with fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Veggie Burger
+  :item_price: 9.95
+  :item_description: Topped with mozzarella cheese and sliced avocado. Served with
+    fresh pickle, cole slaw, and choice of side.
+  :menu_section: Burger Art Museum
+- :item_name: Pepper and Egg Sandwich
+  :item_price: 7.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Sloppy Joe
+  :item_price: 7.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: BLT
+  :item_price: 7.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Joe’s Italian Beef
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Reuben
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Corned Beef
+  :item_price: 8.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Chicken Parmesan Sandwich
+  :item_price: 9.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Fish Sandwich
+  :item_price: 9.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Chicken Sandwich
+  :item_price: 9.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Steak Sandwich
+  :item_price: 10.95
+  :item_description: !!null 
+  :menu_section: Joe's Sandwich Poll
+- :item_name: Meatloaf
+  :item_price: 11.95
+  :item_description: With mashed potatoes.
+  :menu_section: Dinners
+- :item_name: Pan Fried Chicken
+  :item_price: 11.95
+  :item_description: With mashed potatoes.
+  :menu_section: Dinners
+- :item_name: Chicken Breast
+  :item_price: 13.95
+  :item_description: Skinless and boneless.
+  :menu_section: Dinners
+- :item_name: Beer Battered Fish
+  :item_price: 13.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: 1/2 Roasted Chicken
+  :item_price: 14.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: 1/2 Roasted BBQ Chicken
+  :item_price: 14.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: Greek Chicken
+  :item_price: 14.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: 1/2 Slab of Ribs
+  :item_price: 14.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: Full Slab of Ribs
+  :item_price: 19.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: Fried Shrimp Dinner
+  :item_price: 19.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: Steak Filet
+  :item_price: 19.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: Salmon
+  :item_price: 19.95
+  :item_description: !!null 
+  :menu_section: Dinners
+- :item_name: Shrimp and Ribs
+  :item_price: 18.95
+  :item_description: !!null 
+  :menu_section: Joe's Combo
+- :item_name: Chicken and Shrimp
+  :item_price: 18.95
+  :item_description: !!null 
+  :menu_section: Joe's Combo
+- :item_name: Chicken and Ribs
+  :item_price: 19.95
+  :item_description: !!null 
+  :menu_section: Joe's Combo
+- :item_name: Triple Plate
+  :item_price: 21.95
+  :item_description: Shrimp, chicken, and ribs.
+  :menu_section: Joe's Combo
+- :item_name: Hot Apple Pie
+  :item_price: 4.0
+  :item_description: Cinnamon ice cream and apple topping
+  :menu_section: Desserts
+- :item_name: Key Lime Pie
+  :item_price: 4.0
+  :item_description: !!null 
+  :menu_section: Desserts
+- :item_name: Cheesecake
+  :item_price: 4.0
+  :item_description: !!null 
+  :menu_section: Desserts

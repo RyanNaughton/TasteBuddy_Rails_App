@@ -1,0 +1,148 @@
+= form_for @restaurant do |f|
+  -if @restaurant.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@restaurant.errors.count, "error")} prohibited this restaurant from being saved:"
+      %ul
+        - @restaurant.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :foursquare_v1
+    = f.text_field :foursquare_v1
+  .field
+    = f.label :foursquare_v2
+    = f.text_field :foursquare_v2
+  .field
+    = f.label :instagram_v1
+    = f.text_field :instagram_v1
+  .field
+    = f.label :yelp_url, 'Yelp URL'
+    = f.text_field :yelp_url
+  .field
+    = f.label :yelp_id, 'Yelp ID'
+    = f.text_field :yelp_id
+  .field
+    = f.label :grubhub_url, 'GrubHub URL'
+    = f.text_field :grubhub_url
+  .field
+    = f.label :menupages_url, 'MenuPages URL'
+    = f.text_field :menupages_url
+  .field
+    = f.label :cuisine_type
+    = f.text_field :cuisine_type
+  .field
+    = f.label :neighborhood
+    = f.text_field :neighborhood
+  .field
+    = f.label :address_description
+    = f.text_field :address_description
+  .field
+    = f.label :address_1
+    = f.text_field :address_1
+  .field
+    = f.label :address_2
+    = f.text_field :address_2
+  .field
+    = f.label :city_town, 'City'
+    = f.text_field :city_town
+  .field
+    = f.label :state_province, 'State'
+    = f.text_field :state_province
+  .field
+    = f.label :postal_code
+    = f.text_field :postal_code
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :fax
+    = f.text_field :fax
+  .field
+    = f.label :website_url, 'Website URL'
+    = f.text_field :website_url
+  .field
+    = f.label :dress_code
+    = f.text_field :dress_code
+  .field
+    = f.label :credit_cards
+    = f.check_box :credit_cards
+  .field
+    = f.label :reservations
+    = f.check_box :reservations
+  .field
+    = f.label :takeout
+    = f.check_box :takeout
+  .field
+    = f.label :delivery
+    = f.check_box :delivery
+  .field
+    = f.label :delivery_minimum
+    = f.text_field :delivery_minimum
+  .field
+    = f.label :delivery_fee
+    = f.text_field :delivery_fee
+  .field
+    = f.label :delivery_details
+    = f.text_field :delivery_details
+  .field
+    = f.label :delivery_radius
+    = f.text_field :delivery_radius
+  .field
+    = f.label :wheelchair_access
+    = f.check_box :wheelchair_access
+  .field
+    = f.label :group_friendly
+    = f.check_box :group_friendly
+  .field
+    = f.label :kid_friendly
+    = f.check_box :kid_friendly
+  .field
+    = f.label :outdoor_seating
+    = f.check_box :outdoor_seating
+  .field
+    = f.label :byob, 'BYOB'
+    = f.check_box :byob
+  .field
+    = f.label :alcohol_type
+    = f.text_field :alcohol_type
+  .field
+    = f.label :live_music
+    = f.check_box :live_music
+  .field
+    = f.label :live_music_details
+    = f.text_field :live_music_details
+  .field
+    = f.label :jukebox
+    = f.check_box :jukebox
+  .field
+    = f.label :parking
+    = f.text_field :parking
+  .field
+    = f.label :parking_details
+    = f.text_field :parking_details
+  .field
+    = f.label :smoking
+    = f.check_box :smoking
+  .field
+    = f.label :wifi, 'WiFi'
+    = f.check_box :wifi
+  .field
+    = f.label :nearest_transit
+    = f.text_field :nearest_transit
+  .field
+    = f.label :additional_details
+    = f.text_field :additional_details
+  .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    = f.text_field :longitude
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,8 @@
+%p
+  %b= menu_item.name
+  - if menu_item.description.present?
+    %br/
+    = menu_item.description 
+  - if menu_item.price.present?
+    %br/
+    = menu_item.price

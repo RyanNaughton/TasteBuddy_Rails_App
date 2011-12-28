@@ -1,0 +1,13 @@
+= form_for @restaurant_menu_item_comment, :url => restaurant_menu_item_comments_path, :html => { :method => :post } do |f|
+  = hidden_field_tag :restaurant_menu_item_id, @restaurant_menu_item_comment.restaurant_menu_item_id
+  .field
+    = label_tag :text
+    = text_field_tag :text
+  .actions
+    = f.submit 'Save'
+/ = form_tag(restaurant_menu_item_comments_path(@restaurant_menu_item_comment), method: 'post')
+/   .field
+/     = label_tag :text
+/     = text_field_tag :text
+/   .actions
+/     = submit_tag 'Save'

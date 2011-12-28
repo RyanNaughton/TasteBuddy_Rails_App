@@ -1,0 +1,48 @@
+%h1 Menu items
+
+%table
+  %tr
+    %th Name
+    %th Section
+    %th Subsection
+    %th Number
+    %th Foreign name
+    %th Alternative name
+    %th Description
+    %th Tags
+    %th Category values
+    %th Price selector
+    %th CPG
+    %th Price
+    %th Ticket price
+    %th
+    %th
+    %th
+
+  - @restaurant_menu_items.each do |restaurant_menu_item|
+    %tr
+      %td= restaurant_menu_item.name
+      %td= restaurant_menu_item.section
+      %td= restaurant_menu_item.subsection
+      %td= restaurant_menu_item.number
+      %td= restaurant_menu_item.foreign_name
+      %td= restaurant_menu_item.alternative_name
+      %td= restaurant_menu_item.description
+      %td= restaurant_menu_item.tags
+      %td= restaurant_menu_item.category_values
+      %td= restaurant_menu_item.price_selector
+      %td= restaurant_menu_item.cpg
+      %td= restaurant_menu_item.price
+      %td= restaurant_menu_item.ticket_price
+      %td= link_to 'Show', menu_item_path(restaurant_menu_item)
+      - if can? :update, restaurant_menu_item
+        %td= link_to 'Edit', edit_restaurant_menu_item_path(restaurant_menu_item)
+      - if can? :destroy, restaurant_menu_item
+        %td= link_to 'Destroy', restaurant_menu_item_path(restaurant_menu_item), :confirm => 'Are you sure?', :method => :delete
+
+= will_paginate @restaurant_menu_items
+
+%br
+
+- if can? :create, Restaurant::Menu::Item
+  = link_to 'New Item', new_restaurant_menu_item_path

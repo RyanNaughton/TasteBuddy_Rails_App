@@ -1,0 +1,28 @@
+%article
+  = link_to image_tag(picture.attachment.url(:'160px')), picture
+  %p
+    - if picture.user
+      %b User:
+      = picture.user.username
+      %br/
+      - if can? :manage, picture
+        %b User email:
+        = picture.user.email.present? ? link_to(picture.user.email) : "\u2014"
+    %br
+    - if picture.restaurant_id
+      %b Restaurant:
+      = link_to picture.restaurant.name, picture.restaurant
+      %br/
+    - if picture.menu_item_id
+      %b Menu item:
+      = link_to picture.menu_item.name, picture.menu_item
+      %br/
+    %b Created:
+    = time_ago_in_words(picture.created_at)
+    ago
+  = link_to 'Show', picture
+  - if can? :update, picture
+    = link_to 'Edit', edit_picture_path(picture)
+  - if can? :destroy, picture
+    = link_to 'Destroy', picture, :confirm => 'Are you sure?', :method => :delete
+%br/
